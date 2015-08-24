@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/BoldSeas/java_exercise.svg?branch=master)](https://travis-ci.org/BoldSeas/java_exercise)
+
+# Quick start
+
 Using the below command to create this project.
 
     mvn archetype:generate \                                                       1 ↵
