@@ -4,7 +4,7 @@
 
 Using the below command to create this project.
 
-    mvn archetype:generate \                                                       1 ↵
+    mvn archetype:generate \
         -DarchetypeGroupId=com.github.spring-mvc-archetypes \
         -DarchetypeArtifactId=spring-mvc-quickstart \
         -DarchetypeVersion=1.0.0 \
