@@ -22,7 +22,7 @@ import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppC
         JpaConfig.class,
         NoCsrfSecurityConfig.class,
         WebMvcConfig.class
-})
+    })
 public abstract class WebAppConfigurationAware {
 
     @Inject

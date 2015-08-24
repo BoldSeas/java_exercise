@@ -32,7 +32,7 @@ class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new StandardPasswordEncoder();
-	}
+    }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -46,22 +46,22 @@ class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
             .authorizeRequests()
-                .antMatchers("/", "/favicon.ico", "/resources/**", "/signup").permitAll()
-                .anyRequest().authenticated()
-                .and()
+            .antMatchers("/", "/favicon.ico", "/resources/**", "/signup").permitAll()
+            .anyRequest().authenticated()
+            .and()
             .formLogin()
-                .loginPage("/signin")
-                .permitAll()
-                .failureUrl("/signin?error=1")
-                .loginProcessingUrl("/authenticate")
-                .and()
+            .loginPage("/signin")
+            .permitAll()
+            .failureUrl("/signin?error=1")
+            .loginProcessingUrl("/authenticate")
+            .and()
             .logout()
-                .logoutUrl("/logout")
-                .permitAll()
-                .logoutSuccessUrl("/signin?logout")
-                .and()
+            .logoutUrl("/logout")
+            .permitAll()
+            .logoutSuccessUrl("/signin?logout")
+            .and()
             .rememberMe()
-                .rememberMeServices(rememberMeServices())
-                .key("remember-me-key");
+            .rememberMeServices(rememberMeServices())
+            .key("remember-me-key");
     }
 }
