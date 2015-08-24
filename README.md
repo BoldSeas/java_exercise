@@ -2,6 +2,12 @@
 
 # Quick start
 
+    mvn test tomcat7:run
+    
+Open your browser to visit http://localhost:8080/
+
+# Reference
+
 Using the below command to create this project.
 
     mvn archetype:generate \
